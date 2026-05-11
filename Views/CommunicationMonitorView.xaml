@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="Dreamine.Communication.Wpf.Views.CommunicationMonitorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Dreamine.Communication.Wpf.Converters"
+             MinWidth="800"
+             MinHeight="420">
+    <UserControl.Resources>
+        <converters:ConnectionStateBrushConverter x:Key="ConnectionStateBrushConverter" />
+    </UserControl.Resources>
+
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Margin="0,0,0,8">
+            <TextBlock Text="Dreamine Communication Monitor"
+			           FontSize="18"
+			           FontWeight="SemiBold"
+			           VerticalAlignment="Center" />
+
+            <Button Content="Clear Logs"
+			        Width="100"
+			        Height="28"
+			        HorizontalAlignment="Right"
+			        DockPanel.Dock="Right"
+			        Command="{Binding ClearLogsCommand}" />
+        </DockPanel>
+
+        <GroupBox Grid.Row="1" Header="Channels" Margin="0,0,0,8">
+            <DataGrid ItemsSource="{Binding Channels}"
+			          SelectedItem="{Binding SelectedChannel}"
+			          AutoGenerateColumns="False"
+			          IsReadOnly="True"
+			          CanUserAddRows="False"
+			          HeadersVisibility="Column">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="180" />
+                    <DataGridTextColumn Header="Kind" Binding="{Binding Kind}" Width="120" />
+                    <DataGridTemplateColumn Header="State" Width="130">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse Width="10"
+									         Height="10"
+									         Margin="0,0,6,0"
+									         Fill="{Binding State, Converter={StaticResource ConnectionStateBrushConverter}}" />
+                                    <TextBlock Text="{Binding State}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+        <TextBlock Grid.Row="2"
+		           Text="Message Logs"
+		           FontWeight="SemiBold"
+		           Margin="0,0,0,6" />
+
+        <DataGrid Grid.Row="3"
+		          ItemsSource="{Binding Logs}"
+		          AutoGenerateColumns="False"
+		          IsReadOnly="True"
+		          CanUserAddRows="False"
+		          HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Time" Binding="{Binding CreatedAt, StringFormat=HH:mm:ss.fff}" Width="110" />
+                <DataGridTextColumn Header="Channel" Binding="{Binding ChannelName}" Width="150" />
+                <DataGridTextColumn Header="Kind" Binding="{Binding Kind}" Width="90" />
+                <DataGridTextColumn Header="Dir" Binding="{Binding Direction}" Width="70" />
+                <DataGridTextColumn Header="Name" Binding="{Binding MessageName}" Width="160" />
+                <DataGridTextColumn Header="Route" Binding="{Binding Route}" Width="180" />
+                <DataGridTextColumn Header="Bytes" Binding="{Binding PayloadLength}" Width="70" />
+                <DataGridTextColumn Header="Payload" Binding="{Binding PayloadPreview}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

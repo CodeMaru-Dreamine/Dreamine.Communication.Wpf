@@ -2,7 +2,8 @@
 
 `Dreamine.Communication.Wpf` is part of the Dreamine Communication package family.
 
-This package provides the WPF-specific monitoring and diagnostic layer for Dreamine Communication. It is separated from the default FullKit to keep the core packages UI-independent.
+This package provides WPF-specific monitoring and diagnostic components for Dreamine Communication.  
+It is separated from the default `Dreamine.Communication.FullKit` package to keep the core communication packages UI-independent.
 
 [➡️ 한국어 문서 보기](./README_KO.md)
 
@@ -12,18 +13,42 @@ WPF monitoring and diagnostic components for Dreamine Communication.
 
 ## Features
 
-- WPF monitoring boundary
-- Communication state display foundation
-- Message inspection UI foundation
-- Diagnostic component boundary
+- WPF communication monitor `UserControl`
+- Communication channel state display
+- Message send/receive log display
+- Connection state visual indicator
+- Basic diagnostic view model foundation
+
+## Main Components
+
+### Views
+
+- `CommunicationMonitorView`
+
+### ViewModels
+
+- `CommunicationMonitorViewModel`
+
+### Models
+
+- `CommunicationChannelViewItem`
+- `CommunicationMessageLogItem`
+
+### Converters
+
+- `ConnectionStateBrushConverter`
+
+### Commands
+
+- `DelegateCommand`
 
 ## Design Principles
 
-- Keep concrete transport implementations isolated from upper layers.
-- Depend on `Dreamine.Communication.Abstractions` contracts.
-- Keep package responsibilities small and explicit.
+- Keep WPF UI components separated from core communication logic.
+- Do not reference concrete transport packages such as Sockets, Serial, or RabbitMQ.
+- Depend only on `Dreamine.Communication.Abstractions` and `Dreamine.Communication.Core`.
 - Preserve one-way dependency flow.
-- Allow future adapters to be added without changing application logic.
+- Keep this package focused on monitoring and diagnostics UI.
 
 ## Package Role
 
@@ -48,7 +73,9 @@ net8.0-windows
 
 ## Note
 
-This package targets net8.0-windows and uses WPF.
+This package targets `net8.0-windows` and uses WPF.
+
+It is intentionally excluded from the default `Dreamine.Communication.FullKit` package.
 
 ## Related Packages
 
@@ -58,7 +85,6 @@ This package targets net8.0-windows and uses WPF.
 - `Dreamine.Communication.Serial`
 - `Dreamine.Communication.RabbitMQ`
 - `Dreamine.Communication.FullKit`
-- `Dreamine.Communication.Wpf`
 
 ## License
 

@@ -2,28 +2,53 @@
 
 `Dreamine.Communication.Wpf`는 Dreamine Communication 계열 패키지의 일부입니다.
 
-이 패키지는 Dreamine Communication의 WPF 전용 모니터링 및 진단 계층을 제공합니다. Core 계열 패키지를 UI 비종속으로 유지하기 위해 기본 FullKit과 분리되어 있습니다.
+이 패키지는 Dreamine Communication을 위한 WPF 전용 모니터링 및 진단 컴포넌트를 제공합니다.  
+Core 통신 패키지들이 UI에 종속되지 않도록 기본 `Dreamine.Communication.FullKit` 패키지와 분리되어 있습니다.
 
-[➡️ English Version](README.md)
+[➡️ View English README](./README.md)
 
 ## Description
 
-WPF monitoring and diagnostic components for Dreamine Communication.
+Dreamine Communication을 위한 WPF 모니터링 및 진단 컴포넌트입니다.
 
 ## 주요 기능
 
-- WPF 모니터링 경계
-- 통신 상태 표시 기반
-- 메시지 검사 UI 기반
-- 진단 컴포넌트 경계
+- WPF 통신 모니터 `UserControl`
+- 통신 채널 상태 표시
+- 메시지 송신/수신 로그 표시
+- 연결 상태 시각 표시
+- 기본 진단 ViewModel 기반 구조
+
+## 주요 구성 요소
+
+### Views
+
+- `CommunicationMonitorView`
+
+### ViewModels
+
+- `CommunicationMonitorViewModel`
+
+### Models
+
+- `CommunicationChannelViewItem`
+- `CommunicationMessageLogItem`
+
+### Converters
+
+- `ConnectionStateBrushConverter`
+
+### Commands
+
+- `DelegateCommand`
 
 ## 설계 원칙
 
-- 구체 통신 구현체를 상위 레이어와 분리합니다.
-- `Dreamine.Communication.Abstractions`의 계약에 의존합니다.
-- 패키지 책임을 작고 명확하게 유지합니다.
+- WPF UI 컴포넌트를 Core 통신 로직과 분리합니다.
+- Sockets, Serial, RabbitMQ 같은 구체 전송 패키지를 직접 참조하지 않습니다.
+- `Dreamine.Communication.Abstractions`와 `Dreamine.Communication.Core`에만 의존합니다.
 - 단방향 의존성 흐름을 유지합니다.
-- 향후 어댑터를 추가해도 애플리케이션 로직을 변경하지 않도록 합니다.
+- 이 패키지는 모니터링 및 진단 UI에만 집중합니다.
 
 ## 패키지 역할
 
@@ -48,7 +73,9 @@ net8.0-windows
 
 ## 참고
 
-이 패키지는 net8.0-windows를 대상으로 하며 WPF를 사용합니다.
+이 패키지는 `net8.0-windows`를 대상으로 하며 WPF를 사용합니다.
+
+기본 `Dreamine.Communication.FullKit` 패키지에는 의도적으로 포함하지 않습니다.
 
 ## 관련 패키지
 
@@ -58,7 +85,6 @@ net8.0-windows
 - `Dreamine.Communication.Serial`
 - `Dreamine.Communication.RabbitMQ`
 - `Dreamine.Communication.FullKit`
-- `Dreamine.Communication.Wpf`
 
 ## 라이선스
 
