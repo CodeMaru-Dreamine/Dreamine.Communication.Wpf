@@ -98,6 +98,25 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
+    /// \brief 통신 채널 설명을 갱신합니다.
+    /// </summary>
+    /// <param name="name">채널 이름입니다.</param>
+    /// <param name="description">변경할 채널 설명입니다.</param>
+    public void UpdateChannelDescription(string name, string description)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(name);
+
+        var channel = Channels.FirstOrDefault(x => x.Name == name);
+
+        if (channel is null)
+        {
+            return;
+        }
+
+        channel.Description = description ?? string.Empty;
+    }
+
+    /// <summary>
     /// \brief 송신 메시지 로그를 추가합니다.
     /// </summary>
     /// <param name="channelName">채널 이름입니다.</param>

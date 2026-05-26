@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
@@ -29,6 +29,7 @@ public sealed class ConnectionStateBrushConverter : IValueConverter
         return state switch
         {
             ConnectionState.Connected => Brushes.ForestGreen,
+            ConnectionState.Listening => Brushes.ForestGreen,
             ConnectionState.Connecting => Brushes.DarkOrange,
             ConnectionState.Disconnecting => Brushes.DarkOrange,
             ConnectionState.Faulted => Brushes.Firebrick,
