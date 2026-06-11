@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -11,14 +11,14 @@ using Dreamine.Communication.Wpf.Models;
 namespace Dreamine.Communication.Wpf.ViewModels;
 
 /// <summary>
-/// \brief 통신 상태와 메시지 로그를 표시하는 모니터 ViewModel입니다.
+/// 통신 상태와 메시지 로그를 표시하는 모니터 ViewModel입니다.
 /// </summary>
 public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
 {
     private CommunicationChannelViewItem? _selectedChannel;
 
     /// <summary>
-    /// \brief CommunicationMonitorViewModel 클래스의 새 인스턴스를 초기화합니다.
+    /// CommunicationMonitorViewModel 클래스의 새 인스턴스를 초기화합니다.
     /// </summary>
     public CommunicationMonitorViewModel()
     {
@@ -26,22 +26,22 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 속성 변경 시 발생합니다.
+    /// 속성 변경 시 발생합니다.
     /// </summary>
     public event PropertyChangedEventHandler? PropertyChanged;
 
     /// <summary>
-    /// \brief 통신 채널 목록입니다.
+    /// 통신 채널 목록입니다.
     /// </summary>
     public ObservableCollection<CommunicationChannelViewItem> Channels { get; } = new();
 
     /// <summary>
-    /// \brief 메시지 로그 목록입니다.
+    /// 메시지 로그 목록입니다.
     /// </summary>
     public ObservableCollection<CommunicationMessageLogItem> Logs { get; } = new();
 
     /// <summary>
-    /// \brief 선택된 통신 채널입니다.
+    /// 선택된 통신 채널입니다.
     /// </summary>
     public CommunicationChannelViewItem? SelectedChannel
     {
@@ -50,12 +50,12 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 로그 삭제 명령입니다.
+    /// 로그 삭제 명령입니다.
     /// </summary>
     public ICommand ClearLogsCommand { get; }
 
     /// <summary>
-    /// \brief 통신 채널을 추가합니다.
+    /// 통신 채널을 추가합니다.
     /// </summary>
     /// <param name="name">채널 이름입니다.</param>
     /// <param name="kind">전송 방식입니다.</param>
@@ -79,7 +79,7 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 통신 채널 상태를 갱신합니다.
+    /// 통신 채널 상태를 갱신합니다.
     /// </summary>
     /// <param name="name">채널 이름입니다.</param>
     /// <param name="state">변경할 연결 상태입니다.</param>
@@ -98,7 +98,7 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 통신 채널 설명을 갱신합니다.
+    /// 통신 채널 설명을 갱신합니다.
     /// </summary>
     /// <param name="name">채널 이름입니다.</param>
     /// <param name="description">변경할 채널 설명입니다.</param>
@@ -117,7 +117,7 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 송신 메시지 로그를 추가합니다.
+    /// 송신 메시지 로그를 추가합니다.
     /// </summary>
     /// <param name="channelName">채널 이름입니다.</param>
     /// <param name="kind">전송 방식입니다.</param>
@@ -128,7 +128,7 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 수신 메시지 로그를 추가합니다.
+    /// 수신 메시지 로그를 추가합니다.
     /// </summary>
     /// <param name="channelName">채널 이름입니다.</param>
     /// <param name="kind">전송 방식입니다.</param>
@@ -139,7 +139,7 @@ public sealed class CommunicationMonitorViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 메시지 로그를 모두 삭제합니다.
+    /// 메시지 로그를 모두 삭제합니다.
     /// </summary>
     public void ClearLogs()
     {

@@ -1,11 +1,11 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Dreamine.Communication.Abstractions.Enums;
 
 namespace Dreamine.Communication.Wpf.Models;
 
 /// <summary>
-/// \brief 통신 채널 상태 표시용 모델입니다.
+/// 통신 채널 상태 표시용 모델입니다.
 /// </summary>
 public sealed class CommunicationChannelViewItem : INotifyPropertyChanged
 {
@@ -15,12 +15,12 @@ public sealed class CommunicationChannelViewItem : INotifyPropertyChanged
     private string _description = string.Empty;
 
     /// <summary>
-    /// \brief 속성 변경 시 발생합니다.
+    /// 속성 변경 시 발생합니다.
     /// </summary>
     public event PropertyChangedEventHandler? PropertyChanged;
 
     /// <summary>
-    /// \brief 채널 이름입니다.
+    /// 채널 이름입니다.
     /// </summary>
     public string Name
     {
@@ -29,7 +29,7 @@ public sealed class CommunicationChannelViewItem : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 전송 방식입니다.
+    /// 전송 방식입니다.
     /// </summary>
     public TransportKind Kind
     {
@@ -38,7 +38,7 @@ public sealed class CommunicationChannelViewItem : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 연결 상태입니다.
+    /// 연결 상태입니다.
     /// </summary>
     public ConnectionState State
     {
@@ -47,7 +47,7 @@ public sealed class CommunicationChannelViewItem : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// \brief 채널 설명입니다.
+    /// 채널 설명입니다.
     /// </summary>
     public string Description
     {

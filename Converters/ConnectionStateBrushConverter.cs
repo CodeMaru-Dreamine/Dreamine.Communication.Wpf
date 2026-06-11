@@ -7,12 +7,12 @@ using Dreamine.Communication.Abstractions.Enums;
 namespace Dreamine.Communication.Wpf.Converters;
 
 /// <summary>
-/// \brief ConnectionState를 상태 표시용 Brush로 변환합니다.
+/// ConnectionState를 상태 표시용 Brush로 변환합니다.
 /// </summary>
 public sealed class ConnectionStateBrushConverter : IValueConverter
 {
     /// <summary>
-    /// \brief ConnectionState 값을 Brush로 변환합니다.
+    /// ConnectionState 값을 Brush로 변환합니다.
     /// </summary>
     /// <param name="value">변환할 값입니다.</param>
     /// <param name="targetType">대상 타입입니다.</param>
@@ -39,7 +39,7 @@ public sealed class ConnectionStateBrushConverter : IValueConverter
     }
 
     /// <summary>
-    /// \brief Brush를 ConnectionState로 역변환합니다.
+    /// Brush를 ConnectionState로 역변환합니다.
     /// </summary>
     /// <param name="value">변환할 값입니다.</param>
     /// <param name="targetType">대상 타입입니다.</param>
