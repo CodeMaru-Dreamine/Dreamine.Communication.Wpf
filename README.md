@@ -1,5 +1,18 @@
 # Dreamine.Communication.Wpf
 
+[![CI](https://github.com/CodeMaru-Dreamine/Dreamine.Communication.Wpf/actions/workflows/ci.yml/badge.svg)](https://github.com/CodeMaru-Dreamine/Dreamine.Communication.Wpf/actions/workflows/ci.yml)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.Communication.Wpf&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.Communication.Wpf)
+[![Security](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.Communication.Wpf&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.Communication.Wpf)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.Communication.Wpf&metric=coverage)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.Communication.Wpf)
+[![License](https://img.shields.io/github/license/CodeMaru-Dreamine/Dreamine.Communication.Wpf)](LICENSE)
+[![.NET](https://img.shields.io/badge/.NET-8-512BD4)](https://dotnet.microsoft.com/)
+[![NuGet](https://img.shields.io/nuget/v/Dreamine.Communication.Wpf)](https://www.nuget.org/packages/Dreamine.Communication.Wpf)
+[![Downloads](https://img.shields.io/nuget/dt/Dreamine.Communication.Wpf)](https://www.nuget.org/packages/Dreamine.Communication.Wpf)
+[![Docs](https://img.shields.io/badge/Docs-dreamine.kr-2496ED)](https://dreamine.kr)
+[![Guide](https://img.shields.io/badge/Guide-dreamine.kr-2496ED)](https://dreamine.kr)
+[![Playground](https://img.shields.io/badge/Playground-dreamine.kr-7B2CBF)](https://dreamine.kr)
+[![Book](https://img.shields.io/badge/Book-Practical%20MVVM%20Architecture-111111)](https://dreamine.kr)
+
 `Dreamine.Communication.Wpf` is part of the Dreamine Communication package family.
 
 This package provides WPF-specific monitoring and diagnostic components for Dreamine Communication.  

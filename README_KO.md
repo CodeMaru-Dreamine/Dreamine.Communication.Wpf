@@ -1,5 +1,18 @@
 # Dreamine.Communication.Wpf
 
+[![CI](https://github.com/CodeMaru-Dreamine/Dreamine.Communication.Wpf/actions/workflows/ci.yml/badge.svg)](https://github.com/CodeMaru-Dreamine/Dreamine.Communication.Wpf/actions/workflows/ci.yml)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.Communication.Wpf&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.Communication.Wpf)
+[![Security](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.Communication.Wpf&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.Communication.Wpf)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.Communication.Wpf&metric=coverage)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.Communication.Wpf)
+[![License](https://img.shields.io/github/license/CodeMaru-Dreamine/Dreamine.Communication.Wpf)](LICENSE)
+[![.NET](https://img.shields.io/badge/.NET-8-512BD4)](https://dotnet.microsoft.com/)
+[![NuGet](https://img.shields.io/nuget/v/Dreamine.Communication.Wpf)](https://www.nuget.org/packages/Dreamine.Communication.Wpf)
+[![Downloads](https://img.shields.io/nuget/dt/Dreamine.Communication.Wpf)](https://www.nuget.org/packages/Dreamine.Communication.Wpf)
+[![문서](https://img.shields.io/badge/문서-dreamine.kr-2496ED)](https://dreamine.kr)
+[![가이드](https://img.shields.io/badge/가이드-dreamine.kr-2496ED)](https://dreamine.kr)
+[![플레이그라운드](https://img.shields.io/badge/플레이그라운드-dreamine.kr-7B2CBF)](https://dreamine.kr)
+[![도서](https://img.shields.io/badge/도서-실전%20MVVM%20아키텍처-111111)](https://dreamine.kr)
+
 `Dreamine.Communication.Wpf`는 Dreamine Communication 계열 패키지의 일부입니다.
 
 이 패키지는 Dreamine Communication을 위한 WPF 전용 모니터링 및 진단 컴포넌트를 제공합니다.  
